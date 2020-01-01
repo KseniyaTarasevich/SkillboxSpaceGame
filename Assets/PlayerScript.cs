@@ -7,14 +7,20 @@ public class PlayerScript : MonoBehaviour
     public GameObject lazerGun;
     public GameObject lazerShot;
     public GameObject lazerGun2;
+    public GameObject lazerGunSmall;
+    public GameObject lazerShotSmall;
+    public GameObject lazerGunSmall2;
 
     public float speed;
+
     public float tilt; // наклон
     public float xMin, xMax, zMin, zMax;
 
     public float lazerDelay; //задержка между выстрелами
 
-    private float nextShot; //время следующего выстрела
+    private float nextShot; //время следующего выстрела стандартной пушки (средней)
+    private float nextShotSmall;
+
 
     // Start is called before the first frame update
     protected GameControllerScript gameControllerScript;
@@ -62,6 +68,13 @@ public class PlayerScript : MonoBehaviour
             Instantiate(lazerShot, lazerGun.transform.position, Quaternion.identity);
             Instantiate(lazerShot, lazerGun2.transform.position, Quaternion.identity);
             nextShot = Time.time + lazerDelay;
+        }
+
+        if (Input.GetButton("Fire1") && Time.time > nextShotSmall)
+        {
+            Instantiate(lazerShotSmall, lazerGunSmall.transform.position, Quaternion.identity);
+            Instantiate(lazerShotSmall, lazerGunSmall2.transform.position, Quaternion.identity);
+            nextShotSmall = Time.time + lazerDelay / 4;
         }
     }
 }

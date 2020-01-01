@@ -38,6 +38,7 @@ public class AsteroidScript : MonoBehaviour
         if (other.tag == "Player")
         {
             Instantiate(playerExplosion, other.transform.position, Quaternion.identity);
+
         } else { gameControllerScript.increaseScore(10); }
 
         

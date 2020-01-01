@@ -10,20 +10,19 @@ public class GameControllerScript : MonoBehaviour
 
     public GameObject menu;
 
-    private bool isStarted;
+    private bool isStarted = false;
 
     protected int score = 0;
 
     public bool getIsStarted()
     {
-
         return isStarted;
     }
     // Start is called before the first frame update
     void Start()
     {
         scoreTextElement.text = "Score: 0";
-
+      
         startButton.onClick.AddListener(delegate { isStarted = true; menu.SetActive(false); });
     }
 

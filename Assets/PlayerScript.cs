@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     public GameObject lazerGun;
     public GameObject lazerShot;
+    public GameObject lazerGun2;
 
     public float speed;
     public float tilt; // наклон
@@ -59,6 +60,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > nextShot)
         {
             Instantiate(lazerShot, lazerGun.transform.position, Quaternion.identity);
+            Instantiate(lazerShot, lazerGun2.transform.position, Quaternion.identity);
             nextShot = Time.time + lazerDelay;
         }
     }

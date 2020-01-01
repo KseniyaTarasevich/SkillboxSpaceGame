@@ -1859,7 +1859,7 @@ MonoBehaviour:
   lazerGun: {fileID: 1151673755}
   lazerShot: {fileID: 5378431846405193889, guid: 20f2d092ad56105469aa281078baf346,
     type: 3}
-  speed: 20
+  speed: 16.18
   tilt: 15
   xMin: -25
   xMax: 25

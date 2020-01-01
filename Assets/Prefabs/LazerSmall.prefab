@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1553558049543113070}
   - component: {fileID: 365063278858697611}
   - component: {fileID: 6903996918295781936}
+  - component: {fileID: 136893114122121470}
   m_Layer: 0
   m_Name: LazerSmall
   m_TagString: Untagged
@@ -62,6 +63,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 45
+--- !u!136 &136893114122121470
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407050004879636599}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5135165174013873092
 GameObject:
   m_ObjectHideFlags: 0

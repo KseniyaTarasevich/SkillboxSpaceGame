@@ -9,15 +9,22 @@ public class EmitterScript : MonoBehaviour
     public float nextLaunch; // следующий запуск астероида
 
     public float minDelay, maxDelay;
+
+    protected GameControllerScript gameControllerScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameControllerScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControllerScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!gameControllerScript.getIsStarted())
+        {
+            return;
+        }
+
         if (Time.time > nextLaunch)
         {
             nextLaunch = Time.time + Random.Range(minDelay, maxDelay);
